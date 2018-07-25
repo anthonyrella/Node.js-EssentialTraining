@@ -1,4 +1,5 @@
 //note this is https, not http. But all the code would be identical 
+//you can make a request to a site for information without requiring an api
 var https = require("https");
 //using file system for write file blah
 var fs = require("fs");
@@ -12,8 +13,11 @@ var options = {
 	method: "GET"
 };
 
-//both have a request function
+//both modules have a request function
+//need to pass in options
 //once the request has started..callback
+//response object implements the stream interface
+//response gets sent in as a stream
 var req = https.request(options, function(res) {
 
 	var responseBody = "";
