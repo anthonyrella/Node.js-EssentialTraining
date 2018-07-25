@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    //contains get and post
     $.getJSON('/dictionary-api', printTerms);
     $('form').submit(function (e) {
         e.preventDefault();
@@ -8,7 +8,7 @@ $(document).ready(function () {
     });
 
 });
-
+//contains displaying the info in form, as well as a delete event for each term
 function printTerms(terms) {
     $('body>dl').empty();
     $.each(terms, function () {
