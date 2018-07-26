@@ -1,3 +1,4 @@
+//needed to load a wiki page
 var https = require("https");
 
 module.exports = {
@@ -6,6 +7,7 @@ module.exports = {
 		return `${person.last}, ${person.first}`;
 	},
 
+	//object literal enhancements
 	loadWiki(person, callback) {
 
 		var url = `https://en.wikipedia.org/wiki/${person.first}_${person.last}`;

@@ -1,5 +1,6 @@
 var request = require("supertest");
 var expect = require('chai').expect;
+//module to chdck returned html dom
 var cheerio = require("cheerio");
 var rewire = require('rewire');
 var app = rewire('../app');

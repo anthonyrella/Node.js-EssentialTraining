@@ -29,7 +29,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks("grunt-autoprefixer");
 
+	//autoprefixer so it automatically add vinder prefixes to css. So tha stuff like flex works
 	grunt.registerTask("css", ["less", "autoprefixer"]);
 
+	//gunna run the jshint, then export stylesheet from less, then autoprefix the sheet
 	grunt.registerTask("default", ["jshint", "css"]);
 };

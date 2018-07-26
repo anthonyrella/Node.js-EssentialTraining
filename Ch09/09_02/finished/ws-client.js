@@ -1,4 +1,4 @@
-
+//this is how we implement web sockets natively in the browser, using the ws module
 var ws = new WebSocket("ws://localhost:3000");
 
 ws.onopen = function() {
@@ -15,6 +15,7 @@ ws.onmessage = function(payload) {
 
 document.forms[0].onsubmit = function () {
     var input = document.getElementById('message');
+    //sends the message back to the socket server
     ws.send(input.value);
     input.value = '';
 };

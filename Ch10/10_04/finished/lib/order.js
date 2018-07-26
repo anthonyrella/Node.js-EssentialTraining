@@ -1,3 +1,4 @@
+//order module is our SUT
 var inventoryData = require('../data/inventory');
 var warehouse = require('./warehouse');
 
